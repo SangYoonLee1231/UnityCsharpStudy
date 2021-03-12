@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    // Update is called once per frame
+    void Update()
+    {
+        if(Input.GetKey(KeyCode.W))
+        {
+            // Transform의 포시션 값 직접 수정
+            this.transform.position = this.transform.position + new Vector3(0, 0, 2) * Time.deltaTime; //60분의 1
+            
+            // transform.Translate 이용
+            this.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime);
+        }
+    }
+}
