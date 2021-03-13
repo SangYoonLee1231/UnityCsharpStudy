@@ -9,7 +9,7 @@ public class Test : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.W))
         {
-            // Transform의 포시션 값 직접 수정
+            // Transform의 포지션 값 직접 수정
             this.transform.position = this.transform.position + new Vector3(0, 0, 2) * Time.deltaTime; //60분의 1
             
             // transform.Translate 이용
