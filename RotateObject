@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    Vector3 rotation;
+
+    void Start()
+    {
+        rotation = this.transform.eulerAngles;
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.W))
+        {
+            //rotation = rotation + new Vector3(90, 0, 0) * Time.deltaTime;
+            //this.transform.eulerAngles = rotation;
+            //Debug.Log(transform.eulerAngles);
+
+            // 매소드 이용 회전
+            //this.transform.Rotate(new Vector3(90, 0, 0) * Time.deltaTime);
+
+            rotation = rotation + new Vector3(90, 0, 0) * Time.deltaTime;
+            this.transform.rotation = Quaternion.Euler(rotation);
+        }
+
+    }
+}
