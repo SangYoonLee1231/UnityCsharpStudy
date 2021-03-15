@@ -1,0 +1,17 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.W))
+        {
+            this.transform.localScale = this.transform.localScale + new Vector3(2, 2, 2) * Time.deltaTime;
+        }
+
+    }
+}
