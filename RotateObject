@@ -6,7 +6,7 @@ public class Test : MonoBehaviour
 {
     Vector3 rotation;
 
-	// 처음 1회 실행하는 내재 함수
+    // 처음 1회 실행하는 내재 함수
     void Start()
     {
         rotation = this.transform.eulerAngles;
