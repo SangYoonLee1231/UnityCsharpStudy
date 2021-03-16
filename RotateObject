@@ -6,24 +6,26 @@ public class Test : MonoBehaviour
 {
     Vector3 rotation;
 
+	// 처음 1회 실행하는 내재 함수
     void Start()
     {
         rotation = this.transform.eulerAngles;
     }
-
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKey(KeyCode.W))
         {
-            //rotation = rotation + new Vector3(90, 0, 0) * Time.deltaTime;
-            //this.transform.eulerAngles = rotation;
-            //Debug.Log(transform.eulerAngles);
+            // 오브젝트의 로테이션 값을 증가서켜 회전
+            rotation = rotation + new Vector3(90, 0, 0) * Time.deltaTime;
+            this.transform.eulerAngles = rotation;
+            Debug.Log(transform.eulerAngles); // 오브젝트의 로테이션 값 출력
 
-            // 매소드 이용 회전
-            //this.transform.Rotate(new Vector3(90, 0, 0) * Time.deltaTime);
-
+            // Rotate 매소드 이용 회전
+            this.transform.Rotate(new Vector3(90, 0, 0) * Time.deltaTime);
+			
+            // rotation 매소드 이용 회전
             rotation = rotation + new Vector3(90, 0, 0) * Time.deltaTime;
             this.transform.rotation = Quaternion.Euler(rotation);
         }
