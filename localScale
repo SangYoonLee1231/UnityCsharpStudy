@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKey(KeyCode.W))
         {
+       	    // 1초에 2배씩 오브젝트가 커지도록 설정
             this.transform.localScale = this.transform.localScale + new Vector3(2, 2, 2) * Time.deltaTime;
         }
-
     }
 }
