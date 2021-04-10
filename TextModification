@@ -9,6 +9,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        QuizText.text = "3 X 8 = 24";
+        QuizText.text = "3 X 8 = " + (3 * 8);
     }
 }
